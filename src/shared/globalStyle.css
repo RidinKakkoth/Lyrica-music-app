@@ -1,0 +1,7 @@
+.screen-container{
+    width: calc(100% - 100px);
+    height: 100%;
+    background: rgb(80,12,127);
+    background: linear-gradient(148deg, rgba(80,12,127,1) 25%, rgba(255,89,136,1) 75%);
+    border-radius: 30px;
+}
