@@ -1,0 +1,27 @@
+.login-page{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-vector/music-notes-background-with-sound-wave_1017-32861.jpg?w=1380&t=st=1687679962~exp=1687680562~hmac=0db6d74d324f3d8c2006d0fc99e41269b75c79c5e21014d837da49e7230b2f58' );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.img{
+    width: 30%;
+}
+.login-btn{
+width: 20px;
+padding: 15px 0px;
+text-align: center;
+background-color: aliceblue;
+border-radius: 50px;
+color: black;
+font-weight: 600;
+margin-top: 20%;
+}
+a{
+    text-decoration: none;
+}

@@ -6,6 +6,7 @@ import Player from '../player/Player'
 import Favourite from '../favourite/Favourite'
 import Trending from '../trending/Trending'
 import Sidebar from '../../components/sidebar/Sidebar'
+import Login from '../Auth/Login'
 import './home.css'
 
 
@@ -13,14 +14,15 @@ function Home() {
   return (
       <Router>
         <div className='main-body'>
-            <Sidebar/>
+          <Login/>
+            {/* <Sidebar/>
             <Routes>
              <Route path='/' element={<Library/>} />
              <Route path='/feed' element={<Feed/>} />
              <Route path='/player' element={<Player/>} />
              <Route path='/favourite' element={<Favourite/>} />
              <Route path='/trending' element={<Trending/>} />
-            </Routes>
+            </Routes> */}
         </div>
       </Router>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Favourite() {
   return (
-    <div>
+    <div className='screen-container'>
       <h1>favourite</h1>
     </div>
   )
