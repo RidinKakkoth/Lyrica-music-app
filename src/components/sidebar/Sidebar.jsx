@@ -1,14 +1,24 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import './sidebar.css'
 import SidebarButton from './SidebarButton'
 import {MdFavorite} from 'react-icons/md'
 import {FaPlay,FaGripfire,FaSignOutAlt} from 'react-icons/fa'
 import {IoLibrary} from 'react-icons/io5'
 import {MdSpaceDashboard} from 'react-icons/md'
+import apiClient from '../../spotify'
 function Sidebar() {
+  
+  const [image,setImage]=useState("https://static.thenounproject.com/png/363633-200.png")
+  useEffect(()=>{
+    apiClient.get("me").then((response)=>{
+        setImage(response.data.images[0].url)
+    })
+  })
+  
+  
   return (
     <div className='sidebar-container'>
-      <img src="https://yt3.ggpht.com/yti/AHyvSCAxk014Ut9MmMzx0gPRDcHRLsnvrfq-Ch_yf9HwEQ=s88-c-k-c0x00ffffff-no-rj-mo" className='profile-img' alt="profile" />
+      <img src={image} className='profile-img' alt="profile" />
       
         <div>
         <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard/>} />
