@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import apiClient from '../../spotify'
+import './library.css'
 
 function Library() {
 
@@ -16,12 +17,17 @@ useEffect(()=>{
 
   <div className='screen-container'>
 
-    <div className='playlist-container'></div>
+    <div className='library-body'>
 
-    {playlist?.map((playlist)=>{
-      return <div>{playlist.name}</div>
-    } )}
-      
+    {playlist?.map((playlist)=>(
+       <div className='playlist-card'>
+        <img src={playlist.images[0].url} className='playlist-images' alt="playlist-images" />
+       <p className='playlist-title'> {playlist.name}</p> 
+       <p className='playlist-subtitle'> {playlist.tracks.total} Songs</p> 
+        {/* <div className='plalist-fade'></div> */}
+        </div>
+    ))}
+      </div>
     </div>
   )
 }
